@@ -9,6 +9,8 @@
 
 #include <vector>
 
+namespace my_algorithm {
+
 class bubble : sort_algorithm_base {
  public:
   void operator()(std::vector<int> &arr);
@@ -27,5 +29,6 @@ inline __attribute__ ((always_inline))void bubble::operator()(std::vector<int> &
   }
 }
 
+}
 
 #endif //SORT_INCLUDE_BUBBLE_HPP_

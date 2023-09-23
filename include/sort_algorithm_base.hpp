@@ -7,9 +7,13 @@
 
 #include <vector>
 
+namespace my_algorithm {
+
 class sort_algorithm_base {
  public:
-  virtual void operator()(std::vector<int>& arr) = 0;
+  virtual void operator()(std::vector<int> &arr) = 0;
 };
+
+}
 
 #endif //SORT_INCLUDE_SORT_ALGORITHM_BASE_HPP_
