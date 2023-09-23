@@ -11,13 +11,13 @@
 
 #include <algorithm>
 
-/*TEST_P(test_env, SortEmptyVector) {
+TEST_P(test_env, SortEmptyVector) {
   generate_data(empty);
   for (auto &arr : test_env::test_cases)
     measure_and_print(arr,
                       std::bind([](const std::vector<int> &arr) { return arr.empty(); },
                                 std::ref(arr)), "Sorted array is not empty");
-}*/
+}
 
 TEST_P(test_env, SortAverageDistribution) {
   generate_data(uniform);

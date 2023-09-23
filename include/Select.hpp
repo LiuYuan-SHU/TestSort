@@ -28,7 +28,7 @@ inline __attribute__ ((always_inline)) void select::operator()(std::vector<int> 
       }
     }
 
-     std::swap(*min, *next_swap_index);
+    std::swap(*min, *next_swap_index);
     ++next_swap_index;
     min = next_swap_index;
   }

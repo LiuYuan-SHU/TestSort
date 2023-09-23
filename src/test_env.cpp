@@ -91,6 +91,7 @@ void test_env::generate_empty() {
 void test_env::measure_and_print(std::vector<int> &arr, std::function<bool()> judge, const std::string &error_info) {
   // save data for next test
   std::vector<int> tmp(arr);
+  tmp.resize(arr.capacity());
 
   auto start_time = std::chrono::high_resolution_clock::now();
   sort_algorithm(arr);
