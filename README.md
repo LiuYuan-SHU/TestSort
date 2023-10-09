@@ -4,6 +4,8 @@
 
 ## Quick Start
 
+> Xmake is prefered, update in CMake might be latter than Xmake
+
 1. With Cmake:
     
     ```shell
@@ -17,6 +19,16 @@
    xmake
    xmake run
    ```
+
+If you are using xmake, a debug version is built by default. If you want a fast version without debug symbols and so on, run:
+
+```shell
+xmake f -m fastest
+xmake build
+xmake run
+```
+
+In version 1.0.0, executable in fastest mode will cost 7ms while debug version costs 77 ms for 18 tests.
 
 ## How to Use
 
