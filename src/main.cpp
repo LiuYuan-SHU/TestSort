@@ -10,6 +10,7 @@
 #include "Select.hpp"
 #include "test_case.hpp"
 
+// A small example code to generate a callable object
 struct qsort_wrapper {
   inline __attribute__((always_inline)) void operator()(std::vector<int> &vec) {
     std::sort(vec.begin(), vec.end());

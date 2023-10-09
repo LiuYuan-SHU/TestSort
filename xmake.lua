@@ -1,3 +1,6 @@
+-- project version
+set_version("1.0.0")
+
 -- set lanaguage standard 
 set_languages("cxx17")
 set_allowedmodes("debug", "fastest")

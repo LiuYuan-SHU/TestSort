@@ -6,7 +6,6 @@
 #define SORT_SRC_TEST_CASE_HPP_
 
 #include <gtest/gtest.h>
-
 #include <algorithm>
 
 #include "test_env.hpp"
