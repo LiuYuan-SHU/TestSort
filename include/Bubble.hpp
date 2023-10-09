@@ -5,6 +5,7 @@
 #ifndef SORT_INCLUDE_BUBBLE_HPP_
 #define SORT_INCLUDE_BUBBLE_HPP_
 
+#include "global.hpp"
 #include "sort_algorithm_base.hpp"
 
 #include <vector>

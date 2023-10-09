@@ -23,5 +23,10 @@ target("test")
 do
   set_kind("binary")
   add_files("./src/*.cpp")
-  
+
+  on_config(function (target) 
+    if not target:has_features("cxx_attributes") then
+      target:add("defines", "CXX_ATTRIBUTE_DISABLE=1")
+    end
+  end)
 end

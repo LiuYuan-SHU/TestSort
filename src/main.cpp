@@ -4,6 +4,7 @@
 
 #include <gtest/gtest.h>
 
+#include "global.hpp"
 #include "Bubble.hpp"
 #include "Insert.hpp"
 #include "Select.hpp"

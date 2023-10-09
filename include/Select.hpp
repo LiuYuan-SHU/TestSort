@@ -5,9 +5,10 @@
 #ifndef SORT_INCLUDE_SELECT_HPP_
 #define SORT_INCLUDE_SELECT_HPP_
 
-#include <vector>
-
+#include "global.hpp"
 #include "sort_algorithm_base.hpp"
+
+#include <vector>
 
 namespace my_algorithm {
 

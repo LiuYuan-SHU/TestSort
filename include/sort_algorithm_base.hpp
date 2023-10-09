@@ -5,6 +5,8 @@
 #ifndef SORT_INCLUDE_SORT_ALGORITHM_BASE_HPP_
 #define SORT_INCLUDE_SORT_ALGORITHM_BASE_HPP_
 
+#include "global.hpp"
+
 #include <vector>
 
 namespace my_algorithm {

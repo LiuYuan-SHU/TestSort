@@ -5,7 +5,9 @@
 #ifndef SORT_INCLUDE_INSERT_HPP_
 #define SORT_INCLUDE_INSERT_HPP_
 
+#include "global.hpp"
 #include "sort_algorithm_base.hpp"
+
 #include <cstddef>
 
 namespace my_algorithm {
