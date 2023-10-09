@@ -35,9 +35,9 @@ void __attribute__((always_inline)) shell::operator()(vector<int> &arr) {
           arr[index_swap] = tmp;
         }
       }
-      if (std::is_sorted(arr.begin(), arr.end())) {
+      /* if (std::is_sorted(arr.begin(), arr.end())) {
         return;
-      }
+      } */
     }
   }
 }

@@ -4,7 +4,7 @@
 
 ## Quick Start
 
-> Xmake is prefered, update in CMake might be latter than Xmake
+> Xmake is preferred, update in CMake might be latter than Xmake
 
 1. With Cmake:
     
