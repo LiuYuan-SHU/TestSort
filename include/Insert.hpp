@@ -12,7 +12,7 @@ namespace my_algorithm {
 
 class insert : sort_algorithm_base {
 public:
-  void operator()(std::vector<int> &arr);
+  void operator()(std::vector<int> &arr) override;
 };
 
 inline __attribute__((always_inline)) void
@@ -21,7 +21,7 @@ insert::operator()(std::vector<int> &arr) {
   for (index = 1; index < arr.size(); ++index) {
     if (arr[index - 1] > arr[index]) {
       tmp = arr[index];
-      for (index_move = index - 1; arr[index_move] > tmp && index_move >= 1;
+      for (index_move = index; arr[index_move - 1] > tmp && index_move >= 1;
            --index_move) {
         arr[index_move] = arr[index_move - 1];
       }
