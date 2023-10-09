@@ -10,7 +10,7 @@ set_defaultmode("debug")
 add_packages("gtest")
 add_requires("gtest")
 
-add_includedirs("./include/")
+add_includedirs("./include/", "./src")
 add_linkdirs("/opt/local/lib")
 
 -- support both debug and release
