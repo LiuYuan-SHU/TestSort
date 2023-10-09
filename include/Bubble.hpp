@@ -12,11 +12,12 @@
 namespace my_algorithm {
 
 class bubble : sort_algorithm_base {
- public:
+public:
   void operator()(std::vector<int> &arr);
 };
 
-inline __attribute__ ((always_inline))void bubble::operator()(std::vector<int> &arr) {
+inline __attribute__((always_inline)) void
+bubble::operator()(std::vector<int> &arr) {
   bool swapped = false;
   for (size_t index = 0; index < arr.size(); ++index, swapped = false) {
     for (size_t i_index = 0; i_index < arr.size() - index - 1; ++i_index) {
@@ -25,10 +26,12 @@ inline __attribute__ ((always_inline))void bubble::operator()(std::vector<int> &
         swapped = true;
       }
     }
-    if (!swapped) { break; }
+    if (!swapped) {
+      break;
+    }
   }
 }
 
-}
+} // namespace my_algorithm
 
-#endif //SORT_INCLUDE_BUBBLE_HPP_
+#endif // SORT_INCLUDE_BUBBLE_HPP_

@@ -16,9 +16,8 @@ struct algorithm_info {
   std::string name;
 };
 
-class test_env :
-    public testing::TestWithParam<algorithm_info> {
- protected:
+class test_env : public testing::TestWithParam<algorithm_info> {
+protected:
   static std::vector<std::vector<int>> test_cases;
 
   // is all test cases' capacity is set
@@ -27,25 +26,25 @@ class test_env :
   static std::random_device rd;
   static std::mt19937 gen;
 
- protected:
+protected:
   static void init_vecs();
   // The number of numbers in the vec
   // in: 1, 2, 4, 8, ..., 2^25
   static constexpr size_t TEST_CASE_NUM = 10;
   static constexpr int TEST_CASE_NUM_RANGE = 1000;
 
- protected:
+protected:
   std::function<void(std::vector<int> &)> sort_algorithm;
   std::string algorithm_name;
 
- public:
+public:
   explicit inline test_env() {
     const algorithm_info &info = GetParam();
     sort_algorithm = info.algorithm;
     algorithm_name = info.name;
   }
 
- public:
+public:
   enum rand_type {
     empty,    // empty vec
     uniform,  // uniform: U(-TEST_CASE_NUM_RANGE)
@@ -56,7 +55,7 @@ class test_env :
     rand_type_count
   };
 
- private:
+private:
   // generate empty test data
   static void generate_empty();
   // generate uniform distribution test data
@@ -70,17 +69,15 @@ class test_env :
   // generate inverted test data
   static void generate_inverted();
 
- protected:
-  void measure_and_print(std::vector<int> &arr, std::function<bool()> judge, const std::string &error_info);
+protected:
+  void measure_and_print(std::vector<int> &arr, std::function<bool()> judge,
+                         const std::string &error_info);
 
- public:
+public:
   static void generate_data(rand_type type);
 
- public:
-  inline void SetUp()
-  override {
-    init_vecs();
-  }
+public:
+  inline void SetUp() override { init_vecs(); }
 };
 
-#endif //SORT_SRC_TEST_ENV_HPP_
+#endif // SORT_SRC_TEST_ENV_HPP_

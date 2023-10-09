@@ -10,10 +10,10 @@
 namespace my_algorithm {
 
 class sort_algorithm_base {
- public:
+public:
   virtual void operator()(std::vector<int> &arr) = 0;
 };
 
-}
+} // namespace my_algorithm
 
-#endif //SORT_INCLUDE_SORT_ALGORITHM_BASE_HPP_
+#endif // SORT_INCLUDE_SORT_ALGORITHM_BASE_HPP_

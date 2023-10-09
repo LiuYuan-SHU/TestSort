@@ -12,11 +12,12 @@
 namespace my_algorithm {
 
 class select : public sort_algorithm_base {
- public:
+public:
   void operator()(std::vector<int> &other) override;
 };
 
-inline __attribute__ ((always_inline)) void select::operator()(std::vector<int> &other) {
+inline __attribute__((always_inline)) void
+select::operator()(std::vector<int> &other) {
   auto next_swap_index = other.begin();
   auto min = other.begin();
 
@@ -34,6 +35,6 @@ inline __attribute__ ((always_inline)) void select::operator()(std::vector<int> 
   }
 }
 
-}
+} // namespace my_algorithm
 
-#endif //SORT_INCLUDE_SELECT_HPP_
+#endif // SORT_INCLUDE_SELECT_HPP_
