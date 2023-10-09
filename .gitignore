@@ -1,5 +1,7 @@
 **/*.zip
 **/*build*
 **/.DS_Store
-.idea
+**/.idea
 **/.cache
+**/.vscode
+**/.xmake
