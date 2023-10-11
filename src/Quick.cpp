@@ -2,39 +2,28 @@
 #include <cstddef>
 
 namespace my_algorithm {
-void quick::helper(vector<int> &arr, size_t from, size_t to) {
-  if (arr.size() == 0 || from >= to) {
-    return;
+void quick::quick_sort(vector<int> &arr, int from, int to) {
+  if (from < to) {
+    size_t index_pivot = partition(arr, from, to);
+    quick_sort(arr, from, index_pivot - 1);
+    quick_sort(arr, index_pivot + 1, to);
   }
+}
 
-  const int &pivot_element = arr[to];
-
-  std::size_t rhs_pointer = to;
-  std::size_t lhs_pointer = from;
-
-  while (lhs_pointer < rhs_pointer) {
-    while (arr[lhs_pointer] <= pivot_element && lhs_pointer < rhs_pointer) {
-      ++lhs_pointer;
+size_t quick::partition(vector<int> &arr, int from, int to) {
+  int pivot = arr[from];
+  while (from < to) {
+    while (from < to && arr[to] >= pivot) {
+      --to;
     }
-
-    while (arr[rhs_pointer] >= pivot_element && rhs_pointer > lhs_pointer) {
-      --rhs_pointer;
+    arr[from] = arr[to];
+    while (from < to && arr[from] <= pivot) {
+      ++from;
     }
-
-    std::swap(
-        arr[lhs_pointer],
-        arr[rhs_pointer]
-    );
+    arr[to] = arr[from];
   }
+  arr[to] = pivot;
 
-  std::swap(
-      arr[lhs_pointer],
-      arr[to]
-  );
-
-  if (lhs_pointer != 0) {
-    helper(arr, from, lhs_pointer - 1);
-  }
-  helper(arr, lhs_pointer + 1, to);
+  return to;
 }
 } // namespace my_algorithm

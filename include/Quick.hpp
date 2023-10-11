@@ -11,11 +11,13 @@ using std::vector;
 namespace my_algorithm {
 class quick : sort_algorithm_base {
 private:
-  void helper(vector<int> &arr, size_t from, size_t to);
+  void quick_sort(vector<int> &arr, int from, int to);
+  size_t partition(vector<int> &arr, int from, int to);
 
 public:
   void __attribute__((always_inline)) operator()(vector<int> &arr) override {
-    helper(arr, 0, arr.size() - 1);
+    if (arr.size())
+    quick_sort(arr, 0, arr.size() - 1);
   }
 };
 
