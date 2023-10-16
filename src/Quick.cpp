@@ -11,6 +11,7 @@ void quick::quick_sort(vector<int> &arr, int from, int to) {
 }
 
 size_t quick::partition(vector<int> &arr, int from, int to) {
+  // choose the first element as pivot
   int pivot = arr[from];
   while (from < to) {
     while (from < to && arr[to] >= pivot) {
